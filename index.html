@@ -7,6 +7,65 @@
         
     </body>
     <script>
-        
+        function computerPlay(){
+            let computerDecision = Math.floor(Math.random*3);
+            if(computerDecision == 0){
+                return "Rock";
+            }else if(computerDecision == 1){
+                return "Paper";
+            }else{
+                return "Scissors";
+            }
+        }
+
+        function playRound(playerSelection, computerSelection){
+            playerSelection = playerSelection.toLowerCase();
+            computerSelection = computerSelection.toLowerCase();
+
+            if(playerSelection == "rock" && computerSelection == "paper"){
+                return "You Lose! Paper beats Rock";
+            }else if(playerSelection == "rock" && computerSelection == "scissors"){
+                return "You Win! Rock beats Scissors";
+            }else if(playerSelection == "paper" && computerSelection == "rock"){
+                return "You Win! Paper beats Rock";
+            }else if(playerSelection == "paper" && computerSelection == "scissors"){
+                return "You Lose! Scissors beats Paper";
+            }else if(playerSelection == "scissors" && computerSelection == "rock"){
+                return "You Lose! Rock beats Scissors";
+            }else if(playerSelection == "scissors" && computerSelection == "paper"){
+                return "You Win! Scissors beats Paper";
+            }else{
+                return "It's a tie";
+            }
+        }
+
+        function game(){
+            let roundCount = 0;
+            let playerScore = 0;
+            let computerScore = 0;
+            while(roundCount < 5){
+                let playerSelection = prompt("Enter your choice:");
+                let computerSelection = computerPlay();
+                console.log(`Round ${roundCount+1}` );
+                console.log(`Your Choice: ${playerSelection}\nComputer Choice: ${computerSelection}`);
+                let result = playRound(playerSelection, computerSelection);
+                if(result.search(/lose/i))
+                    computerScore++;
+                else
+                    playerScore++;
+
+                console.log(result);
+                console.log(`Your Score: ${playerScore}\nComputer Score: ${computerScore}`);
+                roundCount++;
+            }
+            if(playerScore < computerScore){
+                console.log("Game Over! Computer Wins");
+            }else if(playerScore > computerScore){
+                console.log("Game Complete! You Win");
+            }else{
+                console.log("Game Complete! It's a tie!");
+            }
+            console.log(`Your Score: ${playerScore}\nComputer Score: ${computerScore}`);
+        }
     </script>
 </html>
