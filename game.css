@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, serif;
+    background-color: #2c346f;
+}
+
+header{
+    text-align: center;
+    color:white;
+}
+
+.container{
+    background-color: white;
+    color: #2c346f;
+    width: 80%;
+    padding: 1em;
+    margin: auto;
+}
+
+h2{
+    margin: 0em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.choices{
+    background-color: #2c346f;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.rock,
+.scissors,
+.paper{
+    display: flex;
+    justify-content: flex-end;
+    border: solid 5px white;
+    margin: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rock:hover{
+    border: solid 5px #f383f0 ;
+}
+
+.paper:hover{
+    border: solid 5px #4adfba ;
+}
+
+.scissors:hover{
+    border: solid 5px #0a7cea ;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.selected{
+    border-color: #2c346f;
+}
+
+.display{
+    background-color: #2c346f;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1em;
+    margin-top: 1em ;
+}
+
+.control{
+    background-color: #2c346f;
+    color: white;
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 1em ;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    padding: 0.5em 1em;
+    font-family: Poppins, serif;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.next{
+    background-color: #58da64;
+    border-color: #58da64;
+}
+
+.reset{
+    background-color: #f8433f;
+    border-color: #f8433f;
+}
