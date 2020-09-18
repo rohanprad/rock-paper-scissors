@@ -102,3 +102,33 @@ button{
     background-color: #f8433f;
     border-color: #f8433f;
 }
+
+@media(max-width: 675px){
+
+    body{
+        font-size: 0.75rem;
+    }
+
+    header{
+        width: 100%;
+        font-size: 0.75rem;
+    }
+
+    .choices{
+        padding: 0;
+    }
+
+    .option{
+        background-color: yellow;
+        margin: 0.5em;
+    }
+
+    button{
+        padding: 0.25em 0.5em;
+
+    }
+
+    .control{
+        justify-content: space-around;
+    }
+}
